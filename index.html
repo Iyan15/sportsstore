@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="sportsstore">
+    <head>
+        <title>Angular Js</title>
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-controller="mainCtrl">
+        {{coba}}
+        
+        <hay topic="'Hay'" paragraf="Senuanauabnya">
+            Semuanya
+        </hay>
+        
+        <input type="text" ng-model="criteria" placeholder="cari nama">
+        
+        <ul>
+            <li ng-repeat="orang in orangs | filter:criteria">
+                <p>{{orang.nama}}</p>
+                <p>{{orang.umur}}</p>
+            </li>
+        </ul>
+    </body>
+</html>
